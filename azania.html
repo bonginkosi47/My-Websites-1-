@@ -1,0 +1,276 @@
+ <!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZANIA Izwe lo kudla - Digital Menu</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        azania: {
+                            orange: '#E35B21',
+                            gold: '#FBB03B',
+                            dark: '#101010',
+                            card: '#1E1E1E'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-950 text-gray-100 font-sans min-h-screen flex flex-col">
+
+    <!-- Sticky Navigation Header -->
+    <header class="bg-azania-dark/95 backdrop-blur border-b border-gray-800 p-4 sticky top-0 z-50 shadow-md">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <span class="text-azania-orange text-2xl"><i class="fa-solid fa-fire"></i></span>
+                <div>
+                    <h1 class="font-black text-xl tracking-wider text-white">AZANIA</h1>
+                    <p class="text-[10px] text-azania-gold font-bold -mt-1 tracking-widest">IZWE LO KUDLA</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-2">
+                <a href="tel:+27715391766" class="bg-gray-800 hover:bg-gray-700 text-white p-2 rounded-lg text-xs md:text-sm flex items-center gap-1 border border-gray-700">
+                    <i class="fa-solid fa-phone text-azania-gold"></i>
+                    <span class="hidden md:inline">Call Us</span>
+                </a>
+                <a href="https://wa.me/27715391766?text=Hi%20Azania%20Izwe%20lo%20kudla,%20I%20would%20like%20to%20place%20an%20order" target="_blank" class="bg-azania-orange hover:bg-orange-600 text-white font-bold text-xs md:text-sm px-4 py-2 rounded-lg flex items-center gap-2 shadow-lg shadow-orange-950/50 transition-all">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>+27 71 539 1766</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner with Background Photography -->
+    <section class="relative bg-cover bg-center py-20 px-4 text-center border-b border-gray-800" style="background-image: linear-gradient(to bottom, rgba(16, 16, 16, 0.85), rgba(16, 16, 16, 0.95)), url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1200&q=80');">
+        <div class="max-w-3xl mx-auto space-y-4">
+            <span class="text-xs uppercase font-extrabold text-azania-gold bg-azania-gold/10 px-3 py-1 rounded-full border border-azania-gold/20">Lakeside, Orange Farm (6319)</span>
+            <h2 class="text-3xl md:text-5xl font-black text-white uppercase tracking-tight">"We Give Nothing, But Quality"</h2>
+            <p class="text-gray-300 text-sm md:text-base">Gourmet Kota Bites, Prego Steak Burgers, Loaded Dagwoods, & Soft-Serve Dessert Bar.</p>
+            <div class="flex flex-wrap justify-center gap-4 pt-2">
+                <a href="#azania-menu" class="bg-azania-gold text-black font-extrabold px-6 py-2.5 rounded-md text-sm hover:bg-yellow-400 transition-colors">Browse Digital Menu</a>
+                <a href="#location" class="bg-azania-card text-white font-bold px-6 py-2.5 rounded-md text-sm border border-gray-700 hover:bg-gray-800 transition-colors">Find Location</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Menu Section -->
+    <main id="azania-menu" class="max-w-5xl mx-auto px-4 py-10 flex-1 w-full">
+        <h3 class="text-2xl font-black text-white mb-6 border-l-4 border-azania-orange pl-3">Interactive Digital Menu</h3>
+        
+        <!-- Category Filter Tabs -->
+        <div class="flex overflow-x-auto gap-2 mb-8 pb-2 scrollbar-none">
+            <button onclick="showAzaniaTab('kotas')" id="aza-tab-kotas" class="aza-tab-btn active bg-azania-orange text-white px-4 py-2.5 rounded-lg text-xs md:text-sm font-bold whitespace-nowrap transition-all">Signature Kotas</button>
+            <button onclick="showAzaniaTab('burgers')" id="aza-tab-burgers" class="aza-tab-btn bg-azania-card text-gray-300 px-4 py-2.5 rounded-lg text-xs md:text-sm font-bold whitespace-nowrap transition-all">Gourmet Burgers</button>
+            <button onclick="showAzaniaTab('dagwoods')" id="aza-tab-dagwoods" class="aza-tab-btn bg-azania-card text-gray-300 px-4 py-2.5 rounded-lg text-xs md:text-sm font-bold whitespace-nowrap transition-all">Sandwiches & Dagwoods</button>
+            <button onclick="showAzaniaTab('desserts')" id="aza-tab-desserts" class="aza-tab-btn bg-azania-card text-gray-300 px-4 py-2.5 rounded-lg text-xs md:text-sm font-bold whitespace-nowrap transition-all">Soft-Serve Bar</button>
+        </div>
+
+        <!-- Menu Tab 1: Kotas -->
+        <div id="aza-content-kotas" class="aza-menu-content grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-azania-card rounded-xl border border-gray-800 overflow-hidden flex flex-col sm:flex-row hover:border-azania-orange/50 transition">
+                <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=400&q=80" alt="Burger Bite" class="w-full sm:w-36 h-36 object-cover">
+                <div class="p-4 flex-1 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start">
+                            <h4 class="font-bold text-white text-lg">Burger Bite</h4>
+                            <span class="text-azania-gold font-extrabold text-lg">R44.99</span>
+                        </div>
+                        <p class="text-xs text-gray-400 mt-1">Gourmet beef patty, crispy chips, special house sauce & melted cheese slice.</p>
+                    </div>
+                    <a href="https://wa.me/27715391766?text=Order:%20Burger%20Bite%20(R44.99)" target="_blank" class="mt-3 inline-block text-xs font-bold text-azania-orange hover:underline">Order via WhatsApp →</a>
+                </div>
+            </div>
+
+            <div class="bg-azania-card rounded-xl border border-gray-800 overflow-hidden flex flex-col sm:flex-row hover:border-azania-orange/50 transition">
+                <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=400&q=80" alt="Russian Bite" class="w-full sm:w-36 h-36 object-cover">
+                <div class="p-4 flex-1 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start">
+                            <h4 class="font-bold text-white text-lg">Russian Bite</h4>
+                            <span class="text-azania-gold font-extrabold text-lg">R44.99</span>
+                        </div>
+                        <p class="text-xs text-gray-400 mt-1">Smoked township Russian sausage, loaded hot chips & savory glaze.</p>
+                    </div>
+                    <a href="https://wa.me/27715391766?text=Order:%20Russian%20Bite%20(R44.99)" target="_blank" class="mt-3 inline-block text-xs font-bold text-azania-orange hover:underline">Order via WhatsApp →</a>
+                </div>
+            </div>
+
+            <div class="bg-azania-card rounded-xl border border-gray-800 overflow-hidden flex flex-col sm:flex-row hover:border-azania-orange/50 transition">
+                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=400&q=80" alt="Cheese Russian Bite" class="w-full sm:w-36 h-36 object-cover">
+                <div class="p-4 flex-1 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start">
+                            <h4 class="font-bold text-white text-lg">Cheese Russian Bite</h4>
+                            <span class="text-azania-gold font-extrabold text-lg">R49.99</span>
+                        </div>
+                        <p class="text-xs text-gray-400 mt-1">Smoked Russian sausage layered with double melted cheddar and chips.</p>
+                    </div>
+                    <a href="https://wa.me/27715391766?text=Order:%20Cheese%20Russian%20Bite%20(R49.99)" target="_blank" class="mt-3 inline-block text-xs font-bold text-azania-orange hover:underline">Order via WhatsApp →</a>
+                </div>
+            </div>
+
+            <div class="bg-azania-card rounded-xl border border-gray-800 overflow-hidden flex flex-col sm:flex-row hover:border-azania-orange/50 transition">
+                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=400&q=80" alt="Rib Bite" class="w-full sm:w-36 h-36 object-cover">
+                <div class="p-4 flex-1 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start">
+                            <h4 class="font-bold text-white text-lg">Rib Bite</h4>
+                            <span class="text-azania-gold font-extrabold text-lg">R54.99</span>
+                        </div>
+                        <p class="text-xs text-gray-400 mt-1">Boneless rib patty, golden chips, caramelized sauce & fresh garnish.</p>
+                    </div>
+                    <a href="https://wa.me/27715391766?text=Order:%20Rib%20Bite%20(R54.99)" target="_blank" class="mt-3 inline-block text-xs font-bold text-azania-orange hover:underline">Order via WhatsApp →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Tab 2: Burgers -->
+        <div id="aza-content-burgers" class="aza-menu-content hidden grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-azania-card rounded-xl border border-gray-800 overflow-hidden flex flex-col sm:flex-row hover:border-azania-orange/50 transition">
+                <img src="https://images.unsplash.com/photo-1534790566855-4cb788d389ec?auto=format&fit=crop&w=400&q=80" alt="Prego Steak Burger" class="w-full sm:w-36 h-36 object-cover">
+                <div class="p-4 flex-1 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start">
+                            <h4 class="font-bold text-white text-lg">Prego Steak Burger</h4>
+                            <span class="text-azania-gold font-extrabold text-lg">R79.99</span>
+                        </div>
+                        <p class="text-xs text-gray-400 mt-1">Tender steak strips marinated in garlic chilli Prego sauce on a toasted roll.</p>
+                    </div>
+                    <a href="https://wa.me/27715391766?text=Order:%20Prego%20Steak%20Burger%20(R79.99)" target="_blank" class="mt-3 inline-block text-xs font-bold text-azania-orange hover:underline">Order via WhatsApp →</a>
+                </div>
+            </div>
+
+            <div class="bg-azania-card rounded-xl border border-gray-800 overflow-hidden flex flex-col sm:flex-row hover:border-azania-orange/50 transition">
+                <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=400&q=80" alt="Double Prego Steak Burger" class="w-full sm:w-36 h-36 object-cover">
+                <div class="p-4 flex-1 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start">
+                            <h4 class="font-bold text-white text-lg">Double Prego Steak Burger</h4>
+                            <span class="text-azania-gold font-extrabold text-lg">R99.99</span>
+                        </div>
+                        <p class="text-xs text-gray-400 mt-1">Double portions of marinated steak strips with spicy Prego reduction.</p>
+                    </div>
+                    <a href="https://wa.me/27715391766?text=Order:%20Double%20Prego%20Steak%20Burger%20(R99.99)" target="_blank" class="mt-3 inline-block text-xs font-bold text-azania-orange hover:underline">Order via WhatsApp →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Tab 3: Dagwoods -->
+        <div id="aza-content-dagwoods" class="aza-menu-content hidden grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-azania-card rounded-xl border border-gray-800 overflow-hidden flex flex-col sm:flex-row hover:border-azania-orange/50 transition">
+                <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=400&q=80" alt="Beef Sandwich" class="w-full sm:w-36 h-36 object-cover">
+                <div class="p-4 flex-1 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start">
+                            <h4 class="font-bold text-white text-lg">Beef Sandwich</h4>
+                            <span class="text-azania-gold font-extrabold text-lg">R24.99</span>
+                        </div>
+                        <p class="text-xs text-gray-400 mt-1">Toasted golden bread filled with seasoned slice beef and butter spread.</p>
+                    </div>
+                    <a href="https://wa.me/27715391766?text=Order:%20Beef%20Sandwich%20(R24.99)" target="_blank" class="mt-3 inline-block text-xs font-bold text-azania-orange hover:underline">Order via WhatsApp →</a>
+                </div>
+            </div>
+
+            <div class="bg-azania-card rounded-xl border border-gray-800 overflow-hidden flex flex-col sm:flex-row hover:border-azania-orange/50 transition">
+                <img src="https://images.unsplash.com/photo-1567234669003-dce7a7a88821?auto=format&fit=crop&w=400&q=80" alt="Beef Dagwood with Chips" class="w-full sm:w-36 h-36 object-cover">
+                <div class="p-4 flex-1 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start">
+                            <h4 class="font-bold text-white text-lg">Beef Dagwood with Chips</h4>
+                            <span class="text-azania-gold font-extrabold text-lg">R54.99</span>
+                        </div>
+                        <p class="text-xs text-gray-400 mt-1">Triple-decker toaster, beef patty, fried egg, cheese slice & hot chips.</p>
+                    </div>
+                    <a href="https://wa.me/27715391766?text=Order:%20Beef%20Dagwood%20(R54.99)" target="_blank" class="mt-3 inline-block text-xs font-bold text-azania-orange hover:underline">Order via WhatsApp →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Tab 4: Desserts -->
+        <div id="aza-content-desserts" class="aza-menu-content hidden grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-azania-card rounded-xl border border-gray-800 overflow-hidden flex flex-col sm:flex-row hover:border-azania-orange/50 transition">
+                <img src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?auto=format&fit=crop&w=400&q=80" alt="Berrie Princess Cone" class="w-full sm:w-36 h-36 object-cover">
+                <div class="p-4 flex-1 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start">
+                            <h4 class="font-bold text-white text-lg">Berrie Princess Cone</h4>
+                            <span class="text-azania-gold font-extrabold text-lg">R12.99</span>
+                        </div>
+                        <p class="text-xs text-gray-400 mt-1">Vanilla soft-serve ice cream cone drizzled with sweet strawberry sauce.</p>
+                    </div>
+                    <a href="https://wa.me/27715391766?text=Order:%20Berrie%20Princess%20Cone%20(R12.99)" target="_blank" class="mt-3 inline-block text-xs font-bold text-azania-orange hover:underline">Order via WhatsApp →</a>
+                </div>
+            </div>
+
+            <div class="bg-azania-card rounded-xl border border-gray-800 overflow-hidden flex flex-col sm:flex-row hover:border-azania-orange/50 transition">
+                <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=400&q=80" alt="Choc King Sundae Cup" class="w-full sm:w-36 h-36 object-cover">
+                <div class="p-4 flex-1 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start">
+                            <h4 class="font-bold text-white text-lg">Choc King Sundae Cup</h4>
+                            <span class="text-azania-gold font-extrabold text-lg">R29.99</span>
+                        </div>
+                        <p class="text-xs text-gray-400 mt-1">Rich soft-serve sundae cup loaded with dark chocolate fudge and toppings.</p>
+                    </div>
+                    <a href="https://wa.me/27715391766?text=Order:%20Choc%20King%20Sundae%20(R29.99)" target="_blank" class="mt-3 inline-block text-xs font-bold text-azania-orange hover:underline">Order via WhatsApp →</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Location & Contact Hub -->
+    <section id="location" class="bg-azania-dark border-t border-gray-800 py-12 px-4">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div class="space-y-4">
+                <h3 class="text-2xl font-black text-white border-l-4 border-azania-gold pl-3">Visit AZANIA Lounge</h3>
+                <p class="text-sm text-gray-300">Come experience gourmet street dining and soft-serve desserts right in Orange Farm.</p>
+                <div class="space-y-2 text-xs text-gray-400">
+                    <p class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-azania-orange"></i> Lakeside, Orange Farm, Gauteng, 6319</p>
+                    <p class="flex items-center gap-2"><i class="fa-solid fa-phone text-azania-gold"></i> Phone / WhatsApp: +27 71 539 1766</p>
+                    <p class="flex items-center gap-2"><i class="fa-solid fa-envelope text-azania-orange"></i> azaniaizwelokudla@gmail.com</p>
+                </div>
+            </div>
+            <!-- Embedded Google Map -->
+            <div class="w-full h-64 rounded-xl overflow-hidden border border-gray-800 shadow-xl">
+                <iframe class="w-full h-full border-0" src="https://maps.google.com/maps?q=Orange%20Farm%20Lakeside&t=&z=13&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-gray-800 p-6 text-center text-xs text-gray-500 mt-auto">
+        <p class="font-medium text-gray-400">AZANIA Izwe lo kudla • Lakeside, Orange Farm</p>
+        <p class="mt-1">Contact: +27 71 539 1766 | azaniaizwelokudla@gmail.com</p>
+    </footer>
+
+    <script>
+        function showAzaniaTab(tabName) {
+            const contents = document.querySelectorAll('.aza-menu-content');
+            contents.forEach(content => content.classList.add('hidden'));
+
+            const buttons = document.querySelectorAll('.aza-tab-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-azania-orange', 'text-white');
+                btn.classList.add('bg-azania-card', 'text-gray-300');
+            });
+
+            document.getElementById('aza-content-' + tabName).classList.remove('hidden');
+
+            const activeBtn = document.getElementById('aza-tab-' + tabName);
+            activeBtn.classList.remove('bg-azania-card', 'text-gray-300');
+            activeBtn.classList.add('bg-azania-orange', 'text-white');
+        }
+    </script>
+</body>
+</html>
