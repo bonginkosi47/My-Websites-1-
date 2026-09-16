@@ -3,7 +3,7 @@
 ## Student Information
 * **Student Name:** Bonginkosi Khelemba
 * **Student Number:** ST10535638
-* **Module Code:** [e.g., WEDE5020 / WEDE6021]
+* **Module Code:** WEDE6021
 * **Group/Campus:** RI Braam
 
 ---
