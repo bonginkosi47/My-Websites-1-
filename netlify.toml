@@ -1,0 +1,3 @@
+[build]
+  base = "Azania website"
+  publish = "."
