@@ -1,0 +1,274 @@
+ /* ==========================================
+   1. GLOBAL STYLES & GOOGLE FONTS
+   ========================================== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0d0d0d !important;
+    color: #e0e0e0 !important;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+}
+
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+section {
+    background: #181818 !important;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    border: 1px solid #2a2a2a;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+section:hover {
+    border-color: #ffb300;
+}
+
+h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffb300 !important;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================
+   2. HEADER & NAVIGATION
+   ========================================== */
+header {
+    background: linear-gradient(180deg, #1f1f1f 0%, #121212 100%) !important;
+    color: #ffffff !important;
+    padding: 30px 20px 20px 20px;
+    text-align: center;
+    border-bottom: 4px solid #d32f2f !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.logo img {
+    border-radius: 50%;
+    border: 3px solid #ffb300;
+    margin-bottom: 12px;
+    box-shadow: 0 0 15px rgba(255, 179, 0, 0.3);
+}
+
+.logo h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #ffb300 !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 4px;
+}
+
+.logo p {
+    font-style: italic;
+    color: #bbbbbb !important;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+nav {
+    margin-top: 25px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+nav ul li a {
+    color: #ffffff !important;
+    background-color: #242424;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 1px solid #333;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #d32f2f !important;
+    border-color: #d32f2f;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(211, 47, 47, 0.4);
+}
+
+/* ==========================================
+   3. HERO & CARDS
+   ========================================== */
+.hero {
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('../images/Prego Burger.png') center/cover !important;
+    color: #ffffff !important;
+    padding: 70px 20px;
+    border-radius: 12px;
+    border: 1px solid #d32f2f;
+    box-shadow: 0 10px 30px rgba(211, 47, 47, 0.2);
+}
+
+.hero h2 {
+    color: #ffb300 !important;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #eeeeee !important;
+    margin-bottom: 25px;
+}
+
+.hero a {
+    display: inline-block;
+    background-color: #d32f2f !important;
+    color: #ffffff !important;
+    font-family: 'Montserrat', sans-serif;
+    padding: 14px 32px;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(211, 47, 47, 0.5);
+    transition: all 0.3s ease;
+}
+
+.hero a:hover {
+    background-color: #ffb300 !important;
+    color: #121212 !important;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 179, 0, 0.5);
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+article {
+    background: #222222 !important;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    padding: 18px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+article:hover {
+    transform: translateY(-5px);
+    border-color: #ffb300;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+article img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #444;
+}
+
+article h3 {
+    color: #ffb300 !important;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+article p {
+    color: #cccccc !important;
+    font-size: 0.95rem;
+}
+
+/* ==========================================
+   4. FORMS & INPUTS
+   ========================================== */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    font-weight: 600;
+    color: #ffb300;
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+}
+
+input, textarea {
+    background-color: #242424 !important;
+    color: #ffffff !important;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #3d3d3d;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #ffb300 !important;
+    box-shadow: 0 0 8px rgba(255, 179, 0, 0.3);
+}
+
+button {
+    background-color: #d32f2f !important;
+    color: #ffffff !important;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(211, 47, 47, 0.4);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #ffb300 !important;
+    color: #121212 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 179, 0, 0.4);
+}
+
+/* ==========================================
+   5. FOOTER
+   ========================================== */
+footer {
+    background-color: #121212 !important;
+    color: #777777 !important;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+    font-size: 0.9rem;
+    border-top: 1px solid #222;
+}

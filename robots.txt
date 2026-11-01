@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bonginkosi47.github.io/My-Websites-1-/sitemap.xml
