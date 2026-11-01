@@ -24,5 +24,5 @@ Azania Izwe Lokudla is a responsive restaurant and catering web application buil
 * **Part 1:** Established initial HTML file structure (`index.html`, `about.html`, `services.html`, `enquiry.html`, `contact.html`) and project proposal.
 
 ## References
-* The Independent Institute of Education (IIE). (2026). *WEDE5020 Module Manual and POE Task Brief (Part 1, 2 & 3)*. Unpublished document.
-* Additional image sources and code snippets utilized from public domain / open-source repositories as referenced in the initial project proposal.
+* Google Fonts. (2026). *Open Sans Font Family*. Available at: https://fonts.google.com [Accessed: 1 November 2026].
+* Pexels. (2026). *Stock photography for restaurant catering and food service*. Available at: https://www.pexels.com [Accessed: 1 November 2026].
